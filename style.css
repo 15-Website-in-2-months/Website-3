@@ -1,0 +1,138 @@
+:root {
+  --dark-blue: #002d6d;
+  --light-blue: #8fd4f6;
+  --red: #ff2d37;
+  --yellow: #ffd700;
+}
+
+body {
+  background-color: var(--light-blue);
+}
+h2,
+h1,
+button {
+  font-family: Roboto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.Ct {
+  text-align: center;
+  padding: 1rem;
+}
+.Ct img {
+  margin-bottom: 2rem;
+  width: 8rem;
+  animation: Jump 2s linear infinite;
+}
+@keyframes Jump {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.section-title {
+  font-family: "Playfair", sans-serif;
+  font-size: 2rem;
+  color: var(--dark-blue);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.subject-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.subject-btn {
+  width: 100%;
+  background-color: white;
+  color: var(--dark-blue);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.subject-btn:hover {
+  background-color: var(--dark-blue);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.subject-content {
+  margin-top: 3rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.subject-content h2 {
+  color: var(--dark-blue);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.class-buttons {
+  display: flex;
+}
+
+.class-btn {
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: var(--yellow);
+}
+
+.class-btn:hover {
+  color: var(--yellow);
+  background-color: var(--dark-blue);
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .subject-buttons,
+  .class-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .subject-buttons a {
+    width: 100%;
+  }
+  .subject-content {
+    text-align: center;
+  }
+}
